@@ -5,15 +5,15 @@ import com.stoner.entity.Necklaces;
 import java.io.*;
 import java.util.Objects;
 
-public class Storage {
+public class StorageFile extends StorageFactory {
 
-    private static final String FILE_NAME = "Stones.dat";
+    protected static final String FILE_NAME = "Stones.dat";
 
     static {
         save(new Necklaces[20]);
     }
 
-    private static void save(Necklaces[] necklaces) {
+    public static void save(Necklaces[] necklaces) {
         try {
             FileOutputStream fos = new FileOutputStream(FILE_NAME);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
@@ -24,19 +24,18 @@ public class Storage {
         }
     }
 
-    public void saveStonesToFile(Necklaces necklace) {
-        Necklaces[] necklaces = readFromFile();
+    public void saveStonesTo(Necklaces necklace) {
+        Necklaces[] necklaces = readStonesFrom();
 
         for (int i = 0; i < necklaces.length; i++) {
             if (Objects.isNull(necklaces[i])) {
                 necklaces[i] = necklace;
             }
         }
-
         save(necklaces);
     }
 
-    public Necklaces[] readFromFile() {
+    public Necklaces[] readStonesFrom() {
 
         Necklaces[] necklaces = new Necklaces[1];
 
