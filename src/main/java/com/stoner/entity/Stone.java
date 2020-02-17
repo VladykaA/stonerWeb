@@ -20,4 +20,52 @@ public class Stone implements Serializable {
         this.color = color;
         this.isGemstone = isGemstone;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public BigDecimal getPrice() {
+        return price;
+    }
+
+    public void setPrice(BigDecimal price) {
+        this.price = price;
+    }
+
+    public BigDecimal getCarat() {
+        return carat;
+    }
+
+    public void setCarat(BigDecimal carat) {
+        this.carat = carat;
+    }
+
+    public Transparency getTransparency() {
+        return transparency;
+    }
+
+    public void setTransparency(Transparency transparency) {
+        this.transparency = transparency;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public boolean isGemstone() {
+        return isGemstone;
+    }
+
+    public void setGemstone(boolean gemstone) {
+        isGemstone = gemstone;
+    }
 }

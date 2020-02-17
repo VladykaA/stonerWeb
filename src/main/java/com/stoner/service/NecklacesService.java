@@ -16,7 +16,7 @@ public class NecklacesService implements CRUDService {
 }
 
 /*
-* Builder for Stone distinct package
+*
 * Factory method for DAO
 * JavaDocs
 * JUnit
