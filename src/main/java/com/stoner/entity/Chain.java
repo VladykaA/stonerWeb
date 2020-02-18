@@ -6,11 +6,12 @@ import java.math.BigDecimal;
 public class Chain extends Material implements Serializable {
 
     private BigDecimal weight;
-    private Stone [] stones;
+    private Stone[] stones;
 
     public Chain(String name, String type, boolean isGemstone, BigDecimal weight) {
         super(name, type, isGemstone);
         this.weight = weight;
+        stones = new Stone[10];
     }
 
     public BigDecimal getWeight() {

@@ -6,13 +6,12 @@
     <title>Stoner web application</title>
   </head>
   <body>
-  <!-- header -->
   <div>
     <h1>Stoner app</h1>
   </div>
 
-  <div>       <!-- content -->
-    <div>    <!-- buttons holder -->
+  <div>
+    <div>
       <button onclick="location.href='/stonesList'">List of stones</button>
       <button onclick="location.href='/createNecklaces'">Create a chain</button>
       <button onclick="location.href='/en_ua'">EN/UA</button>
