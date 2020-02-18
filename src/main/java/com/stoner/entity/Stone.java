@@ -11,6 +11,10 @@ public class Stone extends Material implements Serializable {
     private Transparency transparency;
     private Color color;
 
+    /*
+    * if isGemstone transparency appears
+    * */
+
     public Stone(String name, String type, boolean isGemstone, BigDecimal price,
                  BigDecimal carat, Transparency transparency, Color color) {
         super(name, type, isGemstone);
