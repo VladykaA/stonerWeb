@@ -2,31 +2,22 @@ package com.stoner.entity;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.util.Objects;
 
-public class Stone implements Serializable {
-    private String name;
+public class Stone extends Material implements Serializable {
+
     private BigDecimal price;
     private BigDecimal carat;
     private Transparency transparency;
     private Color color;
-    private boolean isGemstone;
 
-    public Stone(String name, BigDecimal price, BigDecimal carat,
-                 Transparency transparency, Color color, boolean isGemstone) {
-        this.name = name;
+    public Stone(String name, String type, boolean isGemstone, BigDecimal price,
+                 BigDecimal carat, Transparency transparency, Color color) {
+        super(name, type, isGemstone);
         this.price = price;
         this.carat = carat;
         this.transparency = transparency;
         this.color = color;
-        this.isGemstone = isGemstone;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public BigDecimal getPrice() {
@@ -59,13 +50,5 @@ public class Stone implements Serializable {
 
     public void setColor(Color color) {
         this.color = color;
-    }
-
-    public boolean isGemstone() {
-        return isGemstone;
-    }
-
-    public void setGemstone(boolean gemstone) {
-        isGemstone = gemstone;
     }
 }

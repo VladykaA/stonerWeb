@@ -1,6 +1,6 @@
 package com.stoner.controller;
 
-import com.stoner.entity.Necklaces;
+import com.stoner.entity.Chain;
 import com.stoner.service.CRUDService;
 import com.stoner.service.NecklacesService;
 
@@ -15,6 +15,6 @@ public class NecklacesCreationServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        SERVICE.save(new Necklaces());
+        SERVICE.save(new Chain());
     }
 }

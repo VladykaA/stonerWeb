@@ -1,9 +1,9 @@
 package com.stoner.service;
 
-import com.stoner.entity.Necklaces;
+import com.stoner.entity.Chain;
 
 public interface CRUDService {
-    void save(Necklaces necklaces);
+    void save(Chain chain);
 
-    Necklaces[] findAll();
+    Chain[] findAll();
 }

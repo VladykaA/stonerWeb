@@ -2,7 +2,7 @@ package com.stoner.service;
 
 import com.stoner.dao.StorageFactory;
 import com.stoner.dao.StorageFile;
-import com.stoner.entity.Necklaces;
+import com.stoner.entity.Chain;
 
 public class NecklacesService implements CRUDService {
     private final static StorageFactory STORAGE_FACTORY = configure();
@@ -14,18 +14,17 @@ public class NecklacesService implements CRUDService {
         return new StorageFile();
     }
 
-    public void save(Necklaces necklaces) {
-        STORAGE_FACTORY.saveStonesTo(necklaces);
+    public void save(Chain chain) {
+        STORAGE_FACTORY.saveStonesTo(chain);
     }
 
-    public Necklaces[] findAll() {
+    public Chain[] findAll() {
         return STORAGE_FACTORY.readStonesFrom();
     }
 }
 
 /*
 *
-* Factory method for DAO
 * JavaDocs
 * JUnit
 * */

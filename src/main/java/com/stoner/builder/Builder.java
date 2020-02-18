@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 
 public interface Builder {
     void setName(String name);
+    void setType(String type);
     void setPrice(BigDecimal price);
     void setCarat(BigDecimal carat);
     void setTransparency(Transparency transparency);

@@ -14,7 +14,7 @@
   <div>       <!-- content -->
     <div>    <!-- buttons holder -->
       <button onclick="location.href='/stonesList'">List of stones</button>
-      <button onclick="location.href='/createNecklaces'">Create a necklaces</button>
+      <button onclick="location.href='/createNecklaces'">Create a chain</button>
     </div>
   </div>
   </body>

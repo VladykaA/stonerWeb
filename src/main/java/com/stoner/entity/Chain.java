@@ -1,13 +1,30 @@
 package com.stoner.entity;
 
 import java.io.Serializable;
+import java.math.BigDecimal;
 
-public class Necklaces implements Serializable {
-    private Stone[] stones;
+public class Chain extends Material implements Serializable {
 
-    public Necklaces() {
-        stones = new Stone[10];
+    private BigDecimal weight;
+    private Stone [] stones;
+
+    public Chain(String name, String type, boolean isGemstone, BigDecimal weight) {
+        super(name, type, isGemstone);
+        this.weight = weight;
     }
+
+    public BigDecimal getWeight() {
+        return weight;
+    }
+
+    public void setWeight(BigDecimal weight) {
+        this.weight = weight;
+    }
+
+    public Stone[] getStones() {
+        return stones;
+    }
+
 
     public void addStone(Stone stone) {
 
@@ -32,5 +49,6 @@ public class Necklaces implements Serializable {
             stones = temp;
         }
     }
+
 }
 

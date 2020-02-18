@@ -8,6 +8,7 @@ import java.math.BigDecimal;
 
 public class StoneBuilder implements Builder{
     private String name;
+    private String type;
     private BigDecimal price;
     private BigDecimal carat;
     private Transparency transparency;
@@ -22,6 +23,11 @@ public class StoneBuilder implements Builder{
     @Override
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+    
+    @Override
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override
@@ -45,6 +51,6 @@ public class StoneBuilder implements Builder{
     }
 
     public Stone buildStone(){
-        return new Stone(name, price, carat, transparency, color, isGemstone);
+        return new Stone(name, type, isGemstone, price, carat, transparency, color);
     }
 }
